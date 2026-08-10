@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://kartolo.sby.datautama.net.id/mx-packages/antix/trixie trixie InRelease
+Hit:2 https://brave-browser-apt-release.s3.brave.com stable InRelease
+Hit:3 https://deb.debian.org/debian trixie InRelease
+Hit:4 https://deb.nodesource.com/node_22.x nodistro InRelease
+Get:5 https://security.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Fetched 43.4 kB in 1s (32.2 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+49 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+php-cli is already the newest version (2:8.4+96).
+php-mbstring is already the newest version (2:8.4+96).
+php-xml is already the newest version (2:8.4+96).
+php-curl is already the newest version (2:8.4+96).
+php-zip is already the newest version (2:8.4+96).
+php-pgsql is already the newest version (2:8.4+96).
+php-bcmath is already the newest version (2:8.4+96).
+php-intl is already the newest version (2:8.4+96).
+php-sqlite3 is already the newest version (2:8.4+96).
+unzip is already the newest version (6.0-29).
+git is already the newest version (1:2.47.3-0+deb13u1).
+postgresql is already the newest version (17+278).
+postgresql-client is already the newest version (17+278).
+composer is already the newest version (2.8.8-1+deb13u3).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 49
+Starting PostgreSQL 17 database server: main.
+ALTER ROLE
+ALTER DATABASE
+GRANT
+GRANT
+ALTER SCHEMA
+Laravel Framework 13.24.0

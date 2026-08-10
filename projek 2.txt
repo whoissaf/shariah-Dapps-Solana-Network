@@ -1,0 +1,5906 @@
+# PRODUCT ARCHITECTURE DOCUMENT
+# Project Definition
+Version : 1.0
+Status  : Draft Locked
+Project : Safara
+Tagline : Verified Travel Risk Intelligence
+
+====================================================
+1. PRODUCT OVERVIEW
+====================================================
+
+Safara adalah platform AI Travel Risk Intelligence yang membantu pengguna memahami kondisi perjalanan suatu lokasi melalui evidence yang telah diverifikasi. Sistem menggabungkan berbagai sumber informasi, melakukan validasi menggunakan Attestcoin Protocol, menghitung tingkat perhatian menggunakan Rule Engine deterministik, kemudian menyajikan hasil dalam bentuk penjelasan yang mudah dipahami.
+
+Safara tidak memprediksi kejahatan.
+
+Safara tidak menjamin keamanan suatu lokasi.
+
+Safara tidak menggantikan keputusan manusia.
+
+Safara merupakan Decision Support System (DSS) yang memberikan evidence, tingkat perhatian, dan rekomendasi berdasarkan data yang tersedia.
+
+====================================================
+2. PROBLEM STATEMENT
+====================================================
+
+Traveler sering menghadapi masalah berikut:
+
+• Informasi keamanan tersebar di banyak tempat.
+• Sulit mengetahui informasi mana yang dapat dipercaya.
+• Berita sering terlambat ditemukan.
+• Informasi komunitas sering tidak terverifikasi.
+• Tidak ada ringkasan yang mudah dipahami.
+• Tidak ada audit terhadap asal informasi.
+• Sulit mengetahui apakah suatu informasi masih relevan.
+
+====================================================
+3. SOLUTION
+====================================================
+
+Safara mengumpulkan evidence dari berbagai sumber.
+
+↓
+
+Evidence dinormalisasi.
+
+↓
+
+Evidence diverifikasi.
+
+↓
+
+Evidence di-attest menggunakan Attestcoin Protocol.
+
+↓
+
+Rule Engine menghitung tingkat perhatian.
+
+↓
+
+AI menjelaskan hasil analisis.
+
+↓
+
+Pengguna memperoleh rekomendasi perjalanan.
+
+====================================================
+4. PRODUCT POSITIONING
+====================================================
+
+Kategori
+
+Travel Risk Intelligence Platform
+
+Jenis Produk
+
+Decision Support System
+
+Target
+
+Traveler
+Digital Nomad
+Backpacker
+Tourist
+NGO
+Travel Agency
+Corporate Traveler
+
+====================================================
+5. PRODUCT GOALS
+====================================================
+
+Goal 1
+
+Membantu traveler memahami kondisi suatu lokasi.
+
+Goal 2
+
+Menyediakan evidence yang transparan.
+
+Goal 3
+
+Mengurangi penyebaran informasi yang tidak tervalidasi.
+
+Goal 4
+
+Menggunakan blockchain hanya untuk meningkatkan trust.
+
+Goal 5
+
+Memberikan Explainable AI.
+
+====================================================
+6. NON GOALS
+====================================================
+
+Safara bukan:
+
+❌ Aplikasi booking hotel
+
+❌ Aplikasi pemesanan tiket
+
+❌ Media sosial
+
+❌ Sistem prediksi kriminalitas
+
+❌ Pengganti kepolisian
+
+❌ Sistem tanggap darurat
+
+❌ Sistem investigasi
+
+====================================================
+7. TARGET USERS
+====================================================
+
+Primary
+
+Traveler
+
+Secondary
+
+Digital Nomad
+
+Backpacker
+
+Business Traveler
+
+Tourist
+
+Third Party
+
+Moderator
+
+Administrator
+
+====================================================
+8. CORE PRINCIPLES
+====================================================
+
+Principle 1
+
+Evidence First
+
+Semua keputusan berasal dari evidence.
+
+------------------------------------
+
+Principle 2
+
+Explainability
+
+Semua hasil dapat dijelaskan.
+
+------------------------------------
+
+Principle 3
+
+Human Decision
+
+Keputusan akhir berada pada pengguna.
+
+------------------------------------
+
+Principle 4
+
+Transparent AI
+
+AI hanya menjelaskan.
+
+------------------------------------
+
+Principle 5
+
+Verifiable Trust
+
+Evidence dapat diverifikasi.
+
+====================================================
+9. SYSTEM SCOPE
+====================================================
+
+Included
+
+✔ Interactive Map
+
+✔ Location Detail
+
+✔ Evidence Timeline
+
+✔ Community Report
+
+✔ AI Summary
+
+✔ Rule Engine
+
+✔ Attestation
+
+✔ Notification
+
+✔ Search
+
+✔ Bookmark
+
+✔ Moderation
+
+✔ Dashboard
+
+Not Included
+
+✖ Hotel Booking
+
+✖ Flight Booking
+
+✖ Marketplace
+
+✖ Chat
+
+✖ NFT Marketplace
+
+✖ Wallet
+
+✖ Payment
+
+✖ Advertisement
+
+====================================================
+10. USER ROLES
+====================================================
+
+Traveler
+
+Melihat kondisi lokasi.
+
+Mengirim laporan.
+
+Membaca evidence.
+
+Mendapat rekomendasi.
+
+----------------------------
+
+Moderator
+
+Memverifikasi evidence.
+
+Melakukan review.
+
+Mengelola laporan.
+
+----------------------------
+
+Administrator
+
+Mengelola sistem.
+
+Mengatur Rule Engine.
+
+Mengelola sumber data.
+
+====================================================
+11. RISK CATEGORIES
+====================================================
+
+Scam
+
+Extortion
+
+Theft
+
+Violence
+
+Disaster
+
+Traffic
+
+Political Unrest
+
+Health Advisory
+
+Government Advisory
+
+Weather
+
+Infrastructure
+
+Other
+
+====================================================
+12. EVIDENCE SOURCES
+====================================================
+
+Official Government Advisory
+
+Verified Community Report
+
+Trusted News
+
+Weather Provider
+
+Emergency Notification
+
+Cross-chain Verified Event
+
+Future
+
+IoT Device
+
+Embassy Alert
+
+NGO
+
+====================================================
+13. ATTENTION LEVEL
+====================================================
+
+Green
+
+Normal
+
+Yellow
+
+Need Attention
+
+Orange
+
+High Attention
+
+Red
+
+Critical Attention
+
+====================================================
+14. AI RESPONSIBILITIES
+====================================================
+
+AI CAN
+
+✔ Summarize
+
+✔ Translate
+
+✔ Explain
+
+✔ Categorize
+
+✔ Generate Recommendation
+
+✔ Answer Questions
+
+--------------------------------
+
+AI CANNOT
+
+✖ Decide Risk Level
+
+✖ Declare Dangerous Area
+
+✖ Create Fake Evidence
+
+✖ Change Rule Engine
+
+✖ Override Moderator
+
+====================================================
+15. RULE ENGINE RESPONSIBILITIES
+====================================================
+
+Rule Engine menentukan:
+
+Evidence Weight
+
+Evidence Freshness
+
+Evidence Priority
+
+Confidence Score
+
+Attention Level
+
+Recommendation Trigger
+
+AI tidak menghitung bagian ini.
+
+====================================================
+16. ATTTESTCOIN RESPONSIBILITIES
+====================================================
+
+Attestcoin digunakan untuk:
+
+✔ Evidence Verification
+
+✔ Cross-chain Verification
+
+✔ Event Attestation
+
+✔ Verification History
+
+✔ Trust Layer
+
+Attestcoin tidak digunakan sebagai database utama.
+
+====================================================
+17. SYSTEM OUTPUT
+====================================================
+
+Location Status
+
+Attention Level
+
+Confidence
+
+Evidence Summary
+
+Evidence Timeline
+
+Recommendation
+
+Verification Status
+
+Last Update
+
+====================================================
+18. HIGH LEVEL ARCHITECTURE
+====================================================
+
+External Sources
+
+↓
+
+Evidence Collector
+
+↓
+
+Evidence Normalizer
+
+↓
+
+Evidence Verification
+
+↓
+
+Attestcoin Protocol
+
+↓
+
+Verified Evidence
+
+↓
+
+Rule Engine
+
+↓
+
+Risk Assessment
+
+↓
+
+AI Explanation
+
+↓
+
+REST API
+
+↓
+
+Flutter Mobile Application
+
+====================================================
+19. TECHNOLOGY STACK
+====================================================
+
+Frontend
+
+Flutter
+
+Backend
+
+Go (Gin)
+
+AI Worker
+
+Python
+
+Database
+
+PostgreSQL
+
+Cache
+
+Redis
+
+Maps
+
+MapLibre
+
+Blockchain
+
+Creditcoin Testnet
+
+Protocol
+
+Attestcoin Protocol
+
+Container
+
+Docker
+
+Deployment
+
+Railway / Render / VPS
+
+====================================================
+20. SUCCESS METRICS
+====================================================
+
+✔ Evidence berhasil diverifikasi
+
+✔ AI menghasilkan penjelasan
+
+✔ Rule Engine menghasilkan Attention Level
+
+✔ Attestation berhasil dibuat
+
+✔ Mobile menampilkan hasil
+
+✔ User memahami alasan sistem
+
+✔ Seluruh keputusan dapat diaudit
+
+====================================================
+21. PRODUCT PHILOSOPHY
+====================================================
+
+Safara tidak memberi tahu pengguna bahwa suatu lokasi aman atau berbahaya.
+
+Safara membantu pengguna memahami evidence yang tersedia sehingga mereka dapat mengambil keputusan perjalanan secara lebih bijaksana.
+
+Blockchain meningkatkan kepercayaan terhadap evidence.
+
+Rule Engine memastikan keputusan konsisten.
+
+AI membuat hasil mudah dipahami manusia.
+
+Manusia tetap menjadi pengambil keputusan terakhir.
+
+====================================================
+END OF DOCUMENT
+
+Catatan sebelum masuk BRD Backend
+
+Saya menyarankan satu perubahan penting agar peluang lolos hackathon lebih tinggi.
+
+Saat ini kita masih menggunakan istilah "Risk" dan "Attention Level". Dalam konteks hackathon Attestcoin, akan lebih kuat jika sistem dibangun di sekitar konsep "Verified Event" daripada "Risk Score".
+
+Artinya alur inti berubah menjadi:
+
+Verified Events
+        ↓
+Evidence Aggregation
+        ↓
+Rule Engine
+        ↓
+Travel Advisory
+        ↓
+AI Explanation
+
+Dengan demikian, Attestcoin menjadi komponen inti yang memverifikasi event lintas sumber sebelum diproses lebih lanjut, bukan sekadar fitur tambahan. Ini lebih selaras dengan tema "cryptographically verified cross-chain data" dan akan membuat BRD Backend yang kita susun berikutnya jauh lebih kuat di mata panitia hackathon.
+
+# BACKEND ARCHITECTURE SPECIFICATION
+Project : Safara
+Version : 1.0
+Status : Locked
+
+====================================================
+1. BACKEND OBJECTIVE
+====================================================
+
+Backend Safara bertugas sebagai pusat pemrosesan evidence perjalanan.
+
+Backend bertanggung jawab untuk:
+
+• menerima evidence
+• memvalidasi evidence
+• memverifikasi evidence
+• menghitung attention level
+• mengelola AI
+• melakukan Attestation
+• menyediakan REST API
+• mengelola seluruh workflow
+
+Backend tidak mengambil keputusan akhir.
+
+====================================================
+2. DESIGN PRINCIPLES
+====================================================
+
+Architecture Style
+
+Clean Architecture
+
+Pattern
+
+Domain Driven Design (DDD)
+
+API
+
+RESTful
+
+Communication
+
+JSON
+
+Authentication
+
+JWT
+
+Authorization
+
+RBAC
+
+Deployment
+
+Docker Container
+
+====================================================
+3. CORE MODULES
+====================================================
+
+01 Authentication
+
+02 User
+
+03 Role
+
+04 Location
+
+05 Evidence
+
+06 Verification
+
+07 Rule Engine
+
+08 AI
+
+09 Attestation
+
+10 Notification
+
+11 Dashboard
+
+12 Administration
+
+====================================================
+4. SERVICE ARCHITECTURE
+====================================================
+
+Flutter Mobile
+
+↓
+
+REST API
+
+↓
+
+API Gateway
+
+↓
+
+Business Services
+
+↓
+
+Domain Services
+
+↓
+
+Infrastructure
+
+↓
+
+Database
+
+↓
+
+Creditcoin + Attestcoin
+
+====================================================
+5. DOMAIN MODULES
+====================================================
+
+Authentication Domain
+
+User Domain
+
+Location Domain
+
+Evidence Domain
+
+Verification Domain
+
+Risk Domain
+
+AI Domain
+
+Attestation Domain
+
+Notification Domain
+
+Analytics Domain
+
+====================================================
+6. REQUEST FLOW
+====================================================
+
+Client
+
+↓
+
+Authentication
+
+↓
+
+Authorization
+
+↓
+
+Validation
+
+↓
+
+Business Logic
+
+↓
+
+Rule Engine
+
+↓
+
+AI
+
+↓
+
+Attestation
+
+↓
+
+Response
+
+====================================================
+7. PROJECT STRUCTURE
+====================================================
+
+cmd/
+
+internal/
+
+config/
+
+api/
+
+middleware/
+
+domain/
+
+application/
+
+repository/
+
+service/
+
+worker/
+
+ai/
+
+rule_engine/
+
+attestation/
+
+database/
+
+migration/
+
+pkg/
+
+docs/
+
+scripts/
+
+====================================================
+8. DOMAIN SERVICES
+====================================================
+
+Authentication Service
+
+User Service
+
+Location Service
+
+Evidence Service
+
+Verification Service
+
+Rule Engine Service
+
+AI Service
+
+Attestation Service
+
+Notification Service
+
+Analytics Service
+
+====================================================
+9. BACKGROUND WORKERS
+====================================================
+
+Worker
+
+Evidence Processing
+
+Worker
+
+AI Summarization
+
+Worker
+
+Verification Queue
+
+Worker
+
+Attestation Queue
+
+Worker
+
+Notification Queue
+
+====================================================
+10. API LAYERS
+====================================================
+
+Public API
+
+Authenticated API
+
+Moderator API
+
+Administrator API
+
+Internal API
+
+====================================================
+11. MIDDLEWARE
+====================================================
+
+Authentication
+
+Authorization
+
+Logging
+
+Rate Limiting
+
+Request ID
+
+Recovery
+
+CORS
+
+Validation
+
+====================================================
+12. EVIDENCE PIPELINE
+====================================================
+
+Receive Evidence
+
+↓
+
+Normalize
+
+↓
+
+Validate
+
+↓
+
+Verify
+
+↓
+
+Attestation
+
+↓
+
+Rule Engine
+
+↓
+
+AI Summary
+
+↓
+
+Store
+
+↓
+
+Publish
+
+====================================================
+13. AI PIPELINE
+====================================================
+
+Verified Evidence
+
+↓
+
+Classification
+
+↓
+
+Summarization
+
+↓
+
+Recommendation
+
+↓
+
+Explanation
+
+↓
+
+Return
+
+====================================================
+14. RULE ENGINE PIPELINE
+====================================================
+
+Verified Evidence
+
+↓
+
+Weight Calculation
+
+↓
+
+Freshness
+
+↓
+
+Priority
+
+↓
+
+Confidence
+
+↓
+
+Attention Level
+
+↓
+
+Recommendation
+
+====================================================
+15. ATTESTATION PIPELINE
+====================================================
+
+Verified Evidence
+
+↓
+
+Canonical JSON
+
+↓
+
+Hash
+
+↓
+
+Attestcoin Protocol
+
+↓
+
+Attestation ID
+
+↓
+
+Store Reference
+
+====================================================
+16. LOCATION PIPELINE
+====================================================
+
+Location Request
+
+↓
+
+Retrieve Evidence
+
+↓
+
+Rule Engine
+
+↓
+
+AI Summary
+
+↓
+
+Return Location Intelligence
+
+====================================================
+17. MODERATION PIPELINE
+====================================================
+
+Community Report
+
+↓
+
+Review Queue
+
+↓
+
+Approve / Reject
+
+↓
+
+Verified Evidence
+
+↓
+
+Attestation
+
+↓
+
+Risk Update
+
+====================================================
+18. SECURITY
+====================================================
+
+JWT
+
+Refresh Token
+
+RBAC
+
+Password Hash
+
+Request Validation
+
+SQL Injection Prevention
+
+XSS Protection
+
+Rate Limit
+
+Audit Log
+
+====================================================
+19. OBSERVABILITY
+====================================================
+
+Structured Logging
+
+Health Check
+
+Metrics
+
+Audit Trail
+
+Error Tracking
+
+Performance Monitoring
+
+====================================================
+20. TECHNOLOGY STACK
+====================================================
+
+Language
+
+Go
+
+Framework
+
+Gin
+
+ORM
+
+GORM
+
+Database
+
+PostgreSQL
+
+Migration
+
+Goose
+
+Cache
+
+Redis
+
+Queue
+
+Asynq
+
+Storage
+
+S3 Compatible
+
+Container
+
+Docker
+
+Reverse Proxy
+
+Nginx
+
+====================================================
+21. AI STACK
+====================================================
+
+Python
+
+FastAPI
+
+Sentence Transformers
+
+LLM Gateway
+
+Ollama (Development)
+
+OpenRouter (Production)
+
+====================================================
+22. BLOCKCHAIN STACK
+====================================================
+
+Creditcoin Testnet
+
+Attestcoin SDK
+
+Attestation Service
+
+Verification Service
+
+====================================================
+23. NON FUNCTIONAL REQUIREMENTS
+====================================================
+
+Availability
+
+99%
+
+API Response
+
+<500 ms (non-AI)
+
+AI Response
+
+<5 s
+
+Attestation
+
+Async
+
+Concurrent User
+
+100+
+
+====================================================
+24. ARCHITECTURE GOALS
+====================================================
+
+Scalable
+
+Modular
+
+Testable
+
+Maintainable
+
+Explainable
+
+Auditable
+
+Hackathon Ready
+
+Production Ready
+
+====================================================
+END OF DOCUMENT
+
+
+
+# DATABASE DESIGN SPECIFICATION
+Project : Safara
+Version : 1.0
+Status : Locked
+
+====================================================
+1. DATABASE OBJECTIVES
+====================================================
+
+Database bertugas sebagai sumber kebenaran (Source of Truth) untuk seluruh data aplikasi.
+
+Database harus:
+
+• Konsisten
+• Mudah diaudit
+• Mudah dikembangkan
+• Mendukung Explainable AI
+• Mendukung Attestcoin
+• Mendukung Rule Engine
+• Mendukung Mobile API
+
+====================================================
+2. DATABASE ENGINE
+====================================================
+
+Database
+
+PostgreSQL 16+
+
+Character
+
+UTF-8
+
+Timezone
+
+UTC
+
+UUID
+
+Primary Key
+
+Soft Delete
+
+YES
+
+Created At
+
+YES
+
+Updated At
+
+YES
+
+====================================================
+3. DATABASE MODULES
+====================================================
+
+Authentication
+
+User Management
+
+Location Intelligence
+
+Evidence
+
+Verification
+
+Risk Engine
+
+AI
+
+Attestation
+
+Notification
+
+Analytics
+
+Administration
+
+====================================================
+4. TABLE GROUPS
+====================================================
+
+AUTH
+
+users
+
+roles
+
+permissions
+
+user_sessions
+
+refresh_tokens
+
+----------------------------
+
+LOCATION
+
+countries
+
+regions
+
+cities
+
+locations
+
+location_categories
+
+----------------------------
+
+EVIDENCE
+
+evidence_sources
+
+evidence_reports
+
+evidence_media
+
+evidence_tags
+
+evidence_status_history
+
+----------------------------
+
+VERIFICATION
+
+verification_requests
+
+verification_results
+
+verification_history
+
+----------------------------
+
+RULE ENGINE
+
+risk_rules
+
+rule_weights
+
+risk_calculations
+
+risk_snapshots
+
+----------------------------
+
+AI
+
+ai_requests
+
+ai_summaries
+
+ai_explanations
+
+----------------------------
+
+ATTESTCOIN
+
+attestations
+
+attestation_history
+
+cross_chain_events
+
+----------------------------
+
+NOTIFICATION
+
+notifications
+
+notification_logs
+
+----------------------------
+
+SYSTEM
+
+audit_logs
+
+system_settings
+
+api_keys
+
+====================================================
+5. CORE ENTITY RELATIONSHIP
+====================================================
+
+User
+
+↓
+
+Evidence Report
+
+↓
+
+Verification
+
+↓
+
+Attestation
+
+↓
+
+Risk Calculation
+
+↓
+
+AI Explanation
+
+↓
+
+Location Intelligence
+
+====================================================
+6. PRIMARY TABLES
+====================================================
+
+users
+
+Menyimpan seluruh akun.
+
+-----------------------------------
+
+locations
+
+Seluruh lokasi.
+
+-----------------------------------
+
+evidence_reports
+
+Seluruh evidence.
+
+-----------------------------------
+
+verification_results
+
+Status evidence.
+
+-----------------------------------
+
+risk_snapshots
+
+Snapshot hasil Rule Engine.
+
+-----------------------------------
+
+ai_summaries
+
+Ringkasan AI.
+
+-----------------------------------
+
+attestations
+
+Data Attestcoin.
+
+====================================================
+7. USER TABLE
+====================================================
+
+id
+
+uuid
+
+name
+
+email
+
+password
+
+role_id
+
+status
+
+created_at
+
+updated_at
+
+====================================================
+8. LOCATION TABLE
+====================================================
+
+id
+
+uuid
+
+country
+
+province
+
+city
+
+district
+
+latitude
+
+longitude
+
+osm_id
+
+risk_level
+
+confidence
+
+last_updated
+
+====================================================
+9. EVIDENCE TABLE
+====================================================
+
+id
+
+uuid
+
+location_id
+
+source_id
+
+category
+
+title
+
+description
+
+language
+
+severity
+
+reported_at
+
+verified
+
+verification_status
+
+created_by
+
+====================================================
+10. EVIDENCE SOURCE TABLE
+====================================================
+
+id
+
+name
+
+type
+
+trust_score
+
+enabled
+
+====================================================
+11. VERIFICATION TABLE
+====================================================
+
+id
+
+evidence_id
+
+status
+
+verified_by
+
+verified_at
+
+confidence
+
+remarks
+
+====================================================
+12. RULE TABLE
+====================================================
+
+id
+
+rule_code
+
+rule_name
+
+weight
+
+enabled
+
+description
+
+====================================================
+13. RISK SNAPSHOT TABLE
+====================================================
+
+id
+
+location_id
+
+attention_level
+
+confidence
+
+total_weight
+
+generated_at
+
+====================================================
+14. AI SUMMARY TABLE
+====================================================
+
+id
+
+location_id
+
+summary
+
+recommendation
+
+language
+
+generated_at
+
+====================================================
+15. AI EXPLANATION TABLE
+====================================================
+
+id
+
+snapshot_id
+
+explanation
+
+reasoning
+
+prompt_version
+
+====================================================
+16. ATTESTATION TABLE
+====================================================
+
+id
+
+evidence_id
+
+attestation_id
+
+chain
+
+network
+
+tx_hash
+
+status
+
+verified_at
+
+====================================================
+17. CROSS CHAIN EVENT TABLE
+====================================================
+
+id
+
+chain_name
+
+contract
+
+event_name
+
+block_number
+
+transaction_hash
+
+attestation_id
+
+====================================================
+18. NOTIFICATION TABLE
+====================================================
+
+id
+
+user_id
+
+type
+
+title
+
+message
+
+status
+
+created_at
+
+====================================================
+19. AUDIT LOG TABLE
+====================================================
+
+id
+
+user_id
+
+module
+
+action
+
+entity
+
+entity_id
+
+before_data
+
+after_data
+
+created_at
+
+====================================================
+20. RELATIONSHIP
+====================================================
+
+User
+
+1
+
+↓
+
+Many
+
+Evidence
+
+------------------------
+
+Evidence
+
+1
+
+↓
+
+1
+
+Verification
+
+------------------------
+
+Verification
+
+1
+
+↓
+
+1
+
+Attestation
+
+------------------------
+
+Location
+
+1
+
+↓
+
+Many
+
+Evidence
+
+------------------------
+
+Location
+
+1
+
+↓
+
+Many
+
+Risk Snapshot
+
+------------------------
+
+Risk Snapshot
+
+1
+
+↓
+
+Many
+
+AI Explanation
+
+====================================================
+21. INDEXES
+====================================================
+
+email
+
+location_id
+
+reported_at
+
+verification_status
+
+risk_level
+
+attention_level
+
+chain
+
+transaction_hash
+
+====================================================
+22. DATA RETENTION
+====================================================
+
+Audit
+
+Never Deleted
+
+Evidence
+
+Soft Delete
+
+AI Summary
+
+Regenerated
+
+Risk Snapshot
+
+Historical
+
+Attestation
+
+Permanent
+
+====================================================
+23. STORAGE STRATEGY
+====================================================
+
+Database
+
+Metadata Only
+
+Images
+
+Object Storage
+
+Videos
+
+Object Storage
+
+Documents
+
+Object Storage
+
+Blockchain
+
+Reference Only
+
+====================================================
+24. DATABASE PRINCIPLES
+====================================================
+
+No duplicated evidence.
+
+No blockchain data duplication.
+
+No AI generated data overwrites source data.
+
+All calculations reproducible.
+
+All evidence traceable.
+
+Every AI output linked to evidence.
+
+====================================================
+25. FUTURE EXTENSION
+====================================================
+
+Travel Advisory API
+
+Embassy Integration
+
+Insurance Provider
+
+Emergency Contact
+
+IoT Sensor
+
+Public CCTV Metadata
+
+NGO Network
+
+====================================================
+END OF DOCUMENT
+
+# RULE ENGINE SPECIFICATION
+Project : Safara
+Version : 1.0
+Status : Locked
+
+====================================================
+1. PURPOSE
+====================================================
+
+Rule Engine bertanggung jawab menghitung tingkat perhatian (Attention Level)
+berdasarkan Verified Evidence.
+
+Rule Engine bersifat:
+
+• Deterministik
+• Explainable
+• Reproducible
+• Auditable
+
+Rule Engine tidak menggunakan AI.
+
+====================================================
+2. OBJECTIVES
+====================================================
+
+Mengubah Verified Evidence menjadi:
+
+✔ Attention Level
+
+✔ Confidence
+
+✔ Recommendation
+
+✔ Reason Codes
+
+====================================================
+3. INPUT
+====================================================
+
+Verified Evidence
+
+↓
+
+Evidence Category
+
+↓
+
+Evidence Severity
+
+↓
+
+Evidence Freshness
+
+↓
+
+Evidence Trust
+
+↓
+
+Evidence Count
+
+↓
+
+Location
+
+====================================================
+4. OUTPUT
+====================================================
+
+Attention Level
+
+Confidence
+
+Recommendation
+
+Triggered Rules
+
+Evidence Summary
+
+====================================================
+5. RULE ENGINE PIPELINE
+====================================================
+
+Receive Verified Evidence
+
+↓
+
+Validate
+
+↓
+
+Filter
+
+↓
+
+Weight Calculation
+
+↓
+
+Freshness Adjustment
+
+↓
+
+Aggregation
+
+↓
+
+Confidence Calculation
+
+↓
+
+Recommendation
+
+↓
+
+Store Snapshot
+
+====================================================
+6. RULE TYPES
+====================================================
+
+Severity Rules
+
+Freshness Rules
+
+Source Trust Rules
+
+Frequency Rules
+
+Density Rules
+
+Trend Rules
+
+Government Rules
+
+Emergency Rules
+
+====================================================
+7. SEVERITY LEVEL
+====================================================
+
+Critical
+
+High
+
+Medium
+
+Low
+
+Informational
+
+====================================================
+8. EVIDENCE CATEGORY
+====================================================
+
+Scam
+
+Extortion
+
+Theft
+
+Violence
+
+Disaster
+
+Health
+
+Traffic
+
+Political
+
+Government Advisory
+
+Weather
+
+Infrastructure
+
+Other
+
+====================================================
+9. SOURCE TRUST LEVEL
+====================================================
+
+Official Government
+
+100
+
+Certified Partner
+
+90
+
+Verified Organization
+
+85
+
+Verified Moderator
+
+80
+
+Verified Community
+
+70
+
+Community
+
+50
+
+Anonymous
+
+20
+
+====================================================
+10. EVIDENCE FRESHNESS
+====================================================
+
+0 - 24 Hours
+
+Very Fresh
+
+100%
+
+--------------------------------
+
+1 - 3 Days
+
+90%
+
+--------------------------------
+
+4 - 7 Days
+
+75%
+
+--------------------------------
+
+8 - 30 Days
+
+50%
+
+--------------------------------
+
+30+ Days
+
+25%
+
+====================================================
+11. RULE WEIGHT
+====================================================
+
+Critical Event
+
+100
+
+Government Advisory
+
+90
+
+Multiple Verified Reports
+
+80
+
+Verified Community Report
+
+70
+
+Trusted News
+
+65
+
+Weather Warning
+
+60
+
+Single Community Report
+
+30
+
+Anonymous Report
+
+10
+
+====================================================
+12. FREQUENCY RULE
+====================================================
+
+Repeated Evidence
+
+↓
+
+Increase Confidence
+
+Repeated Evidence
+
+↓
+
+Never Duplicate Weight
+
+====================================================
+13. DENSITY RULE
+====================================================
+
+Nearby Evidence
+
+↓
+
+Increase Attention
+
+Sparse Evidence
+
+↓
+
+Lower Attention
+
+====================================================
+14. TREND RULE
+====================================================
+
+Evidence Increasing
+
+↓
+
+Increase Attention
+
+Evidence Stable
+
+↓
+
+Maintain
+
+Evidence Decreasing
+
+↓
+
+Decrease Attention
+
+====================================================
+15. GOVERNMENT RULE
+====================================================
+
+Government Warning
+
+↓
+
+Immediate High Priority
+
+Government Clearance
+
+↓
+
+Decrease Attention
+
+====================================================
+16. ATTENTION LEVEL
+====================================================
+
+Green
+
+0 - 29
+
+Normal
+
+------------------------
+
+Yellow
+
+30 - 59
+
+Attention
+
+------------------------
+
+Orange
+
+60 - 79
+
+High Attention
+
+------------------------
+
+Red
+
+80+
+
+Critical Attention
+
+====================================================
+17. CONFIDENCE LEVEL
+====================================================
+
+Low
+
+0 - 39
+
+Medium
+
+40 - 69
+
+High
+
+70 - 100
+
+====================================================
+18. RECOMMENDATION ENGINE
+====================================================
+
+Green
+
+Proceed Normally
+
+------------------------
+
+Yellow
+
+Stay Alert
+
+------------------------
+
+Orange
+
+Review Latest Evidence Before Travel
+
+------------------------
+
+Red
+
+Delay Travel If Possible
+
+====================================================
+19. REASON CODES
+====================================================
+
+RF001
+
+Government Advisory
+
+RF002
+
+Multiple Scam Reports
+
+RF003
+
+Repeated Extortion
+
+RF004
+
+Weather Warning
+
+RF005
+
+Traffic Disruption
+
+RF006
+
+Political Event
+
+RF007
+
+Infrastructure Failure
+
+RF008
+
+Violence Cluster
+
+RF009
+
+Health Alert
+
+RF010
+
+High Density Reports
+
+====================================================
+20. EXPLAINABILITY
+====================================================
+
+Every Attention Level must contain:
+
+Triggered Rules
+
+Evidence Count
+
+Evidence Source
+
+Evidence Freshness
+
+Confidence
+
+Recommendation
+
+====================================================
+21. AI BOUNDARY
+====================================================
+
+AI MAY
+
+Explain
+
+Summarize
+
+Translate
+
+Recommend
+
+--------------------------------
+
+AI MAY NOT
+
+Calculate Weight
+
+Assign Attention
+
+Change Rule
+
+Override Rule Engine
+
+====================================================
+22. SNAPSHOT
+====================================================
+
+Every calculation generates:
+
+Snapshot ID
+
+Timestamp
+
+Triggered Rules
+
+Evidence Used
+
+Attention Level
+
+Confidence
+
+Recommendation
+
+====================================================
+23. AUDITABILITY
+====================================================
+
+Every calculation can be replayed.
+
+Every calculation can be verified.
+
+Every rule execution is logged.
+
+No hidden calculation.
+
+====================================================
+24. FUTURE RULES
+====================================================
+
+Embassy Advisory
+
+Insurance Risk
+
+Disease Outbreak
+
+Natural Disaster Prediction
+
+IoT Sensors
+
+Cross-chain Travel Alerts
+
+====================================================
+25. DESIGN PRINCIPLES
+====================================================
+
+Evidence before AI
+
+Rule before Opinion
+
+Transparency before Complexity
+
+Explainability before Automation
+
+Human Decision before AI
+
+====================================================
+END OF DOCUMENT
+
+
+# ATTESTCOIN INTEGRATION SPECIFICATION
+Project : Safara
+Version : 1.0
+Status : Locked
+
+====================================================
+1. PURPOSE
+====================================================
+
+Attestcoin Protocol berfungsi sebagai Verification Layer
+untuk memverifikasi event dan evidence yang digunakan
+oleh Safara.
+
+Attestcoin bukan database utama.
+
+Attestcoin bukan tempat penyimpanan seluruh data.
+
+Attestcoin berfungsi sebagai sumber kepercayaan
+(Trust Layer).
+
+====================================================
+2. OBJECTIVES
+====================================================
+
+• Memastikan evidence dapat diverifikasi.
+
+• Menjamin integritas evidence.
+
+• Menyediakan riwayat verifikasi.
+
+• Mendukung Cross-chain Verification.
+
+• Menjadi dasar Explainable AI.
+
+====================================================
+3. DESIGN PRINCIPLES
+====================================================
+
+Trust by Verification
+
+Minimal On-chain Data
+
+Privacy First
+
+Evidence Integrity
+
+Auditability
+
+Cross-chain Ready
+
+====================================================
+4. WHAT IS VERIFIED
+====================================================
+
+Verified Evidence
+
+Evidence Metadata
+
+Evidence Timestamp
+
+Evidence Hash
+
+Verification Result
+
+Cross-chain Event
+
+Verification History
+
+====================================================
+5. WHAT IS NOT STORED
+====================================================
+
+Personal Data
+
+Reporter Identity
+
+Images
+
+Videos
+
+Documents
+
+AI Prompt
+
+AI Response
+
+Private Information
+
+====================================================
+6. HIGH LEVEL FLOW
+====================================================
+
+Evidence
+
+↓
+
+Normalization
+
+↓
+
+Verification
+
+↓
+
+Canonical JSON
+
+↓
+
+SHA-256
+
+↓
+
+Attestcoin Protocol
+
+↓
+
+Attestation ID
+
+↓
+
+Verified Event
+
+↓
+
+Rule Engine
+
+↓
+
+AI Explanation
+
+====================================================
+7. BACKEND MODULES
+====================================================
+
+Evidence Service
+
+Verification Service
+
+Attestation Service
+
+Cross-chain Service
+
+Verification History
+
+Blockchain Gateway
+
+====================================================
+8. EVIDENCE LIFECYCLE
+====================================================
+
+Received
+
+↓
+
+Validated
+
+↓
+
+Verified
+
+↓
+
+Attested
+
+↓
+
+Published
+
+↓
+
+Archived
+
+====================================================
+9. ATTTESTATION OBJECT
+====================================================
+
+Attestation ID
+
+Evidence ID
+
+Evidence Hash
+
+Timestamp
+
+Verifier
+
+Verification Status
+
+Chain
+
+Transaction Reference
+
+====================================================
+10. CROSS-CHAIN MODEL
+====================================================
+
+External Chain
+
+↓
+
+Attestcoin Protocol
+
+↓
+
+Verified Event
+
+↓
+
+Safara Backend
+
+↓
+
+Rule Engine
+
+====================================================
+11. VERIFICATION STATUS
+====================================================
+
+Pending
+
+Verified
+
+Rejected
+
+Expired
+
+Revoked
+
+Archived
+
+====================================================
+12. VERIFICATION RULES
+====================================================
+
+Evidence must be validated.
+
+Evidence must have timestamp.
+
+Evidence must have location.
+
+Evidence must have category.
+
+Evidence must generate canonical hash.
+
+Evidence cannot be modified after attestation.
+
+====================================================
+13. HASHING
+====================================================
+
+Algorithm
+
+SHA-256
+
+Canonical Format
+
+JSON Canonicalization
+
+Hash Created
+
+Before Attestation
+
+====================================================
+14. IMMUTABILITY
+====================================================
+
+After attestation:
+
+Evidence cannot be edited.
+
+Correction creates new version.
+
+Old version remains auditable.
+
+====================================================
+15. VERSIONING
+====================================================
+
+Evidence V1
+
+↓
+
+Correction
+
+↓
+
+Evidence V2
+
+↓
+
+New Attestation
+
+↓
+
+Version History
+
+====================================================
+16. CROSS-CHAIN EVENTS
+====================================================
+
+Supported Events
+
+Government Alert
+
+Partner Verification
+
+Emergency Advisory
+
+Weather Alert
+
+Future Oracle Event
+
+====================================================
+17. BLOCKCHAIN RESPONSIBILITY
+====================================================
+
+Attestcoin only stores
+verification reference.
+
+Application data remains
+inside PostgreSQL.
+
+====================================================
+18. AI INTERACTION
+====================================================
+
+AI receives only:
+
+Verified Evidence
+
+Verification Status
+
+Evidence Timeline
+
+Attention Level
+
+Reason Codes
+
+AI never receives:
+
+Pending Evidence
+
+Rejected Evidence
+
+====================================================
+19. FAILURE HANDLING
+====================================================
+
+If Attestation Fails
+
+↓
+
+Evidence remains Verified
+
+↓
+
+Retry Queue
+
+↓
+
+Retry Attestation
+
+↓
+
+Notify Administrator
+
+====================================================
+20. RETRY STRATEGY
+====================================================
+
+Retry 1
+
+30 Seconds
+
+Retry 2
+
+2 Minutes
+
+Retry 3
+
+10 Minutes
+
+Retry 4
+
+Manual Review
+
+====================================================
+21. AUDITABILITY
+====================================================
+
+Every attestation
+creates immutable log.
+
+Every verification
+is replayable.
+
+Every blockchain transaction
+is traceable.
+
+====================================================
+22. SECURITY
+====================================================
+
+Private Key
+
+Never Stored in Database
+
+Signed Transaction
+
+Generated by Secure Service
+
+Secrets
+
+Stored in Environment Variable
+
+HTTPS Only
+
+====================================================
+23. OBSERVABILITY
+====================================================
+
+Metrics
+
+Attestation Success Rate
+
+Verification Success Rate
+
+Retry Count
+
+Blockchain Latency
+
+Error Rate
+
+====================================================
+24. FUTURE EXTENSION
+====================================================
+
+Multi-chain Verification
+
+Cross-chain Reputation
+
+Partner Attestation
+
+DAO Verification
+
+Insurance Verification
+
+Embassy Verification
+
+====================================================
+25. DESIGN PHILOSOPHY
+====================================================
+
+Blockchain is used
+to establish trust.
+
+Blockchain is not used
+to replace databases.
+
+Evidence drives decisions.
+
+Attestation proves integrity.
+
+AI explains results.
+
+Humans make decisions.
+
+====================================================
+END OF DOCUMENT
+
+
+Saya menemukan satu revisi besar yang saya sarankan sebelum kita masuk ke API Specification
+
+Selama membuat dokumen ini saya menyadari satu hal.
+
+Konsep kita masih memakai istilah:
+
+Evidence
+
+Padahal sesuai filosofi Attestcoin Protocol, yang diproses oleh sistem seharusnya adalah Verified Event, bukan sekadar evidence.
+
+Saya menyarankan mengganti istilah inti di seluruh backend menjadi:
+
+Raw Evidence
+        ↓
+Evidence Verification
+        ↓
+Verified Event
+        ↓
+Attestation
+        ↓
+Rule Engine
+        ↓
+Travel Advisory
+        ↓
+AI Explanation
+
+Dengan perubahan ini:
+
+Backend menjadi jauh lebih konsisten.
+Attestcoin benar-benar menjadi inti workflow.
+Seluruh API nantinya akan menggunakan objek Verified Event, bukan objek Evidence.
+Penjelasan kepada juri menjadi jauh lebih kuat karena menggunakan terminologi yang sejalan dengan tema hackathon.
+Status kesiapan backend
+
+Setelah empat dokumen yang sudah kita buat:
+
+✅ Product Architecture
+✅ Backend Architecture
+✅ Database Design
+✅ Rule Engine Specification
+✅ Attestcoin Integration Specification
+
+# REST API SPECIFICATION
+Project : Safara
+Version : 1.0
+Status : Locked
+
+====================================================
+1. API OBJECTIVES
+====================================================
+
+REST API menjadi penghubung antara:
+
+• Flutter Mobile
+• Admin Dashboard
+• AI Worker
+• Attestcoin Service
+
+Semua komunikasi menggunakan JSON.
+
+====================================================
+2. API VERSIONING
+====================================================
+
+Base URL
+
+/api/v1
+
+Future
+
+/api/v2
+
+====================================================
+3. RESPONSE FORMAT
+====================================================
+
+Success
+
+{
+    "success": true,
+    "message": "...",
+    "data": {}
+}
+
+------------------------------------
+
+Error
+
+{
+    "success": false,
+    "message": "...",
+    "errors": []
+}
+
+====================================================
+4. AUTHENTICATION
+====================================================
+
+JWT
+
+Access Token
+
+Refresh Token
+
+Authorization
+
+Bearer Token
+
+====================================================
+5. USER MODULE
+====================================================
+
+POST
+
+/auth/register
+
+POST
+
+/auth/login
+
+POST
+
+/auth/logout
+
+POST
+
+/auth/refresh
+
+GET
+
+/profile
+
+PUT
+
+/profile
+
+DELETE
+
+/profile
+
+====================================================
+6. LOCATION MODULE
+====================================================
+
+GET
+
+/locations
+
+GET
+
+/locations/{id}
+
+GET
+
+/locations/search
+
+GET
+
+/locations/nearby
+
+GET
+
+/locations/trending
+
+====================================================
+7. VERIFIED EVENT MODULE
+====================================================
+
+GET
+
+/events
+
+GET
+
+/events/{id}
+
+GET
+
+/events/location/{location_id}
+
+GET
+
+/events/category/{category}
+
+GET
+
+/events/latest
+
+====================================================
+8. COMMUNITY REPORT MODULE
+====================================================
+
+POST
+
+/reports
+
+GET
+
+/reports/my
+
+GET
+
+/reports/{id}
+
+PUT
+
+/reports/{id}
+
+DELETE
+
+/reports/{id}
+
+====================================================
+9. MODERATOR MODULE
+====================================================
+
+GET
+
+/moderator/reports
+
+POST
+
+/moderator/verify
+
+POST
+
+/moderator/reject
+
+POST
+
+/moderator/request-revision
+
+====================================================
+10. ATTENTION MODULE
+====================================================
+
+GET
+
+/attention/location/{id}
+
+GET
+
+/attention/history/{id}
+
+====================================================
+11. ADVISORY MODULE
+====================================================
+
+GET
+
+/advisories/location/{id}
+
+GET
+
+/advisories/latest
+
+====================================================
+12. AI MODULE
+====================================================
+
+POST
+
+/ai/explain
+
+POST
+
+/ai/summarize
+
+POST
+
+/ai/recommendation
+
+====================================================
+13. MAP MODULE
+====================================================
+
+GET
+
+/map/markers
+
+GET
+
+/map/heatmap
+
+GET
+
+/map/tiles
+
+====================================================
+14. EVIDENCE TIMELINE
+====================================================
+
+GET
+
+/timeline/location/{id}
+
+====================================================
+15. BOOKMARK MODULE
+====================================================
+
+POST
+
+/bookmarks
+
+GET
+
+/bookmarks
+
+DELETE
+
+/bookmarks/{id}
+
+====================================================
+16. NOTIFICATION MODULE
+====================================================
+
+GET
+
+/notifications
+
+PUT
+
+/notifications/read
+
+DELETE
+
+/notifications/{id}
+
+====================================================
+17. ADMIN MODULE
+====================================================
+
+GET
+
+/admin/dashboard
+
+GET
+
+/admin/statistics
+
+GET
+
+/admin/system-health
+
+====================================================
+18. ATTTESTCOIN MODULE
+====================================================
+
+POST
+
+/attestation/create
+
+GET
+
+/attestation/{id}
+
+GET
+
+/attestation/status/{id}
+
+GET
+
+/attestation/history/{location_id}
+
+====================================================
+19. ANALYTICS MODULE
+====================================================
+
+GET
+
+/statistics
+
+GET
+
+/statistics/location
+
+GET
+
+/statistics/category
+
+====================================================
+20. SEARCH MODULE
+====================================================
+
+GET
+
+/search
+
+GET
+
+/search/location
+
+GET
+
+/search/event
+
+====================================================
+21. HEALTH MODULE
+====================================================
+
+GET
+
+/health
+
+GET
+
+/version
+
+====================================================
+22. INTERNAL API
+====================================================
+
+POST
+
+/internal/rule-engine
+
+POST
+
+/internal/verification
+
+POST
+
+/internal/attestation
+
+POST
+
+/internal/ai
+
+Internal API
+tidak dapat diakses oleh Flutter.
+
+====================================================
+23. HTTP STATUS
+====================================================
+
+200 OK
+
+201 Created
+
+204 No Content
+
+400 Bad Request
+
+401 Unauthorized
+
+403 Forbidden
+
+404 Not Found
+
+409 Conflict
+
+422 Validation Error
+
+429 Too Many Requests
+
+500 Internal Server Error
+
+====================================================
+24. PAGINATION
+====================================================
+
+?page=
+
+&limit=
+
+&sort=
+
+&order=
+
+====================================================
+25. FILTERING
+====================================================
+
+category
+
+country
+
+city
+
+attention
+
+date
+
+verified
+
+====================================================
+26. API SECURITY
+====================================================
+
+JWT
+
+HTTPS
+
+Rate Limit
+
+Request Validation
+
+Request ID
+
+Audit Log
+
+====================================================
+27. DESIGN PRINCIPLES
+====================================================
+
+Consistent
+
+RESTful
+
+Versioned
+
+Stateless
+
+Documented
+
+Testable
+
+====================================================
+END OF DOCUMENT
+
+
+
+⚠️ Namun saya ingin melakukan satu revisi besar sebelum BRD Backend
+
+Setelah seluruh spesifikasi di atas, saya melihat ada satu kelemahan yang cukup mendasar.
+
+Saat ini API masih berorientasi pada CRUD (Create, Read, Update, Delete).
+
+Padahal inti produk ini adalah workflow.
+
+Sebagai contoh, alur sebenarnya bukan:
+
+POST /reports
+
+↓
+
+GET /events
+
+↓
+
+GET /attention
+
+Tetapi:
+
+Submit Report
+        ↓
+Validation
+        ↓
+Verification
+        ↓
+Attestation
+        ↓
+Rule Engine
+        ↓
+Travel Advisory
+        ↓
+AI Explanation
+        ↓
+Notification
+
+Artinya saya menyarankan agar backend dibangun menggunakan workflow orchestration (state machine sederhana) dibanding sekadar kumpulan endpoint CRUD. Dengan pendekatan ini:
+
+status setiap laporan jelas (Submitted → Verified → Attested → Published);
+lebih mudah diaudit;
+lebih mudah didemokan di hackathon;
+lebih sesuai dengan konsep "verified event lifecycle".
+Rekomendasi sebelum coding
+
+Daripada langsung membuat BRD Backend, saya menyarankan satu dokumen terakhir:
+
+Workflow & Business Process Specification
+
+Dokumen ini akan mendefinisikan seluruh alur bisnis end-to-end (sekitar 20–30 workflow utama) dan menjadi "peta" implementasi backend. Setelah itu, Anda dapat mulai coding modul demi modul tanpa kebingungan, dan BRD Backend akan benar-benar menjadi dokumen implementasi, bukan dokumen yang masih sering berubah. Menurut saya, ini adalah langkah terakhir yang diperlukan sebelum masuk ke implementasi.
+
+
+# WORKFLOW & BUSINESS PROCESS SPECIFICATION
+Project : Safara
+Version : 1.0
+Status : Locked
+
+====================================================
+1. BUSINESS PHILOSOPHY
+====================================================
+
+Safara memproses informasi sebagai perjalanan sebuah
+Verified Event.
+
+Sistem tidak memproses data secara acak.
+
+Semua data memiliki lifecycle.
+
+====================================================
+2. VERIFIED EVENT LIFECYCLE
+====================================================
+
+Draft
+
+↓
+
+Submitted
+
+↓
+
+Validated
+
+↓
+
+Verified
+
+↓
+
+Attested
+
+↓
+
+Published
+
+↓
+
+Archived
+
+====================================================
+3. MAIN BUSINESS FLOW
+====================================================
+
+Traveler
+
+↓
+
+Submit Report
+
+↓
+
+Validation
+
+↓
+
+Verification
+
+↓
+
+Attestation
+
+↓
+
+Rule Engine
+
+↓
+
+Travel Advisory
+
+↓
+
+AI Explanation
+
+↓
+
+Mobile Display
+
+====================================================
+4. STATE MACHINE
+====================================================
+
+DRAFT
+
+↓
+
+SUBMITTED
+
+↓
+
+UNDER_REVIEW
+
+↓
+
+VERIFIED
+
+↓
+
+ATTESTED
+
+↓
+
+PUBLISHED
+
+↓
+
+ARCHIVED
+
+====================================================
+5. USER WORKFLOW
+====================================================
+
+Open Application
+
+↓
+
+Search Location
+
+↓
+
+Open Detail
+
+↓
+
+Read Advisory
+
+↓
+
+Read AI Explanation
+
+↓
+
+Read Verified Events
+
+↓
+
+(Optional)
+
+Submit Report
+
+====================================================
+6. REPORT SUBMISSION
+====================================================
+
+Traveler
+
+↓
+
+Choose Location
+
+↓
+
+Choose Category
+
+↓
+
+Write Description
+
+↓
+
+Upload Evidence (optional)
+
+↓
+
+Submit
+
+↓
+
+Receive Tracking ID
+
+====================================================
+7. VALIDATION WORKFLOW
+====================================================
+
+Submitted Report
+
+↓
+
+Required Field Validation
+
+↓
+
+Location Validation
+
+↓
+
+Duplicate Detection
+
+↓
+
+Accepted
+
+or
+
+Rejected
+
+====================================================
+8. DUPLICATE DETECTION
+====================================================
+
+New Report
+
+↓
+
+Compare
+
+↓
+
+Same Location
+
+↓
+
+Same Category
+
+↓
+
+Time Window
+
+↓
+
+Possible Duplicate
+
+====================================================
+9. MODERATOR WORKFLOW
+====================================================
+
+Open Queue
+
+↓
+
+Review Report
+
+↓
+
+Approve
+
+↓
+
+Reject
+
+↓
+
+Request Revision
+
+====================================================
+10. VERIFIED EVENT CREATION
+====================================================
+
+Approved Report
+
+↓
+
+Generate Verified Event
+
+↓
+
+Create Version
+
+↓
+
+Store Timeline
+
+====================================================
+11. ATTESTATION WORKFLOW
+====================================================
+
+Verified Event
+
+↓
+
+Canonical JSON
+
+↓
+
+SHA256
+
+↓
+
+Attestcoin
+
+↓
+
+Attestation ID
+
+↓
+
+Store Reference
+
+====================================================
+12. RULE ENGINE WORKFLOW
+====================================================
+
+Verified Event
+
+↓
+
+Load Rules
+
+↓
+
+Calculate
+
+↓
+
+Attention Level
+
+↓
+
+Recommendation
+
+↓
+
+Snapshot
+
+====================================================
+13. AI WORKFLOW
+====================================================
+
+Snapshot
+
+↓
+
+Evidence Summary
+
+↓
+
+Reason Codes
+
+↓
+
+Prompt Builder
+
+↓
+
+LLM
+
+↓
+
+Explanation
+
+↓
+
+Store
+
+====================================================
+14. LOCATION UPDATE
+====================================================
+
+New Snapshot
+
+↓
+
+Replace Current Snapshot
+
+↓
+
+Keep History
+
+↓
+
+Update Map
+
+====================================================
+15. MAP WORKFLOW
+====================================================
+
+Location
+
+↓
+
+Current Snapshot
+
+↓
+
+Marker Color
+
+↓
+
+Popup Summary
+
+↓
+
+Open Detail
+
+====================================================
+16. LOCATION DETAIL
+====================================================
+
+Location
+
+↓
+
+Attention Level
+
+↓
+
+Confidence
+
+↓
+
+Recommendation
+
+↓
+
+AI Explanation
+
+↓
+
+Timeline
+
+↓
+
+Verified Events
+
+====================================================
+17. SEARCH WORKFLOW
+====================================================
+
+Keyword
+
+↓
+
+Location Search
+
+↓
+
+Ranking
+
+↓
+
+Result
+
+====================================================
+18. FILTER WORKFLOW
+====================================================
+
+Country
+
+City
+
+Category
+
+Attention
+
+Verified Only
+
+Date
+
+====================================================
+19. BOOKMARK WORKFLOW
+====================================================
+
+Location
+
+↓
+
+Bookmark
+
+↓
+
+User Collection
+
+====================================================
+20. NOTIFICATION WORKFLOW
+====================================================
+
+New Verified Event
+
+↓
+
+Attention Changed
+
+↓
+
+Subscribed Users
+
+↓
+
+Notification
+
+====================================================
+21. ADMIN WORKFLOW
+====================================================
+
+Dashboard
+
+↓
+
+Statistics
+
+↓
+
+Moderation
+
+↓
+
+Rules
+
+↓
+
+Settings
+
+====================================================
+22. RULE MANAGEMENT
+====================================================
+
+Administrator
+
+↓
+
+Create Rule
+
+↓
+
+Enable
+
+↓
+
+Disable
+
+↓
+
+Publish
+
+====================================================
+23. AI FAILOVER
+====================================================
+
+LLM Failed
+
+↓
+
+Retry
+
+↓
+
+Fallback Model
+
+↓
+
+Cached Summary
+
+↓
+
+System Notice
+
+====================================================
+24. ATTESTATION FAILOVER
+====================================================
+
+Attestcoin Failed
+
+↓
+
+Retry Queue
+
+↓
+
+Background Worker
+
+↓
+
+Success
+
+or
+
+Manual Review
+
+====================================================
+25. EVIDENCE VERSIONING
+====================================================
+
+Version 1
+
+↓
+
+Correction
+
+↓
+
+Version 2
+
+↓
+
+New Attestation
+
+↓
+
+History
+
+====================================================
+26. AUDIT WORKFLOW
+====================================================
+
+Action
+
+↓
+
+Audit Log
+
+↓
+
+Timestamp
+
+↓
+
+User
+
+↓
+
+Entity
+
+↓
+
+Result
+
+====================================================
+27. SECURITY WORKFLOW
+====================================================
+
+Login
+
+↓
+
+JWT
+
+↓
+
+Permission
+
+↓
+
+Business Logic
+
+↓
+
+Response
+
+====================================================
+28. API WORKFLOW
+====================================================
+
+Flutter
+
+↓
+
+REST API
+
+↓
+
+Application Service
+
+↓
+
+Domain Service
+
+↓
+
+Repository
+
+↓
+
+Database
+
+====================================================
+29. COMPLETE SYSTEM FLOW
+====================================================
+
+Community Report
+
+↓
+
+Validation
+
+↓
+
+Verification
+
+↓
+
+Verified Event
+
+↓
+
+Attestation
+
+↓
+
+Rule Engine
+
+↓
+
+Snapshot
+
+↓
+
+AI Explanation
+
+↓
+
+Travel Advisory
+
+↓
+
+Map Update
+
+↓
+
+Notification
+
+↓
+
+Audit
+
+====================================================
+30. END STATE
+====================================================
+
+Every displayed advisory:
+
+✔ berasal dari Verified Event
+
+✔ memiliki Explanation
+
+✔ memiliki Reason Codes
+
+✔ memiliki Snapshot
+
+✔ memiliki Attestation
+
+✔ dapat diaudit
+
+✔ dapat direproduksi
+
+====================================================
+END OF DOCUMENT
+
+Sekarang saya ingin mengusulkan perubahan yang menurut saya akan meningkatkan peluang lolos hackathon secara signifikan
+
+Setelah menyusun seluruh arsitektur, saya melihat bahwa konsep kita masih terlalu berfokus pada "laporan komunitas". Padahal tema hackathon adalah:
+
+Build for the Real World menggunakan Attestcoin Protocol sebagai decentralized verification layer.
+
+Agar proyek lebih kuat, saya menyarankan mengubah sumber data utama menjadi Verified External Events, sedangkan laporan komunitas menjadi pelengkap.
+
+Arsitektur yang saya rekomendasikan
+Government Advisory
+        │
+Weather Alert
+        │
+Trusted News
+        │
+NGO Feed
+        │
+Community Report
+        │
+        ▼
+Evidence Collector
+        ▼
+Verification Engine
+        ▼
+Attestcoin Protocol
+        ▼
+Verified Event
+        ▼
+Rule Engine
+        ▼
+Travel Advisory
+        ▼
+AI Explanation
+        ▼
+Flutter App
+
+Dengan pendekatan ini:
+
+Attestcoin menjadi fitur inti, bukan tambahan.
+AI hanya bekerja pada data yang sudah diverifikasi.
+Rule Engine tetap deterministik dan transparan.
+Juri dapat langsung melihat hubungan yang kuat antara kebutuhan aplikasi dan penggunaan Attestcoin.
+Status desain saat ini
+
+Dengan seluruh dokumen yang telah kita buat:
+
+✅ Product Architecture
+✅ Backend Architecture
+✅ Database Design
+✅ Rule Engine Specification
+✅ Attestcoin Integration Specification
+✅ REST API Specification
+✅ Workflow & Business Process Specification
+
+Menurut saya desain backend sudah sekitar 95% terkunci. Tahap berikutnya yang paling bernilai bukan langsung coding, melainkan menyusun BRD Backend lengkap (fitur, business rules, acceptance criteria, sequence flow, error handling, dan non-functional requirements) sehingga implementasi Go + Gin dapat dilakukan modul demi modul tanpa perlu mengubah arsitektur dasar.
+
+
+====================================================
+FUNCTIONAL REQUIREMENTS
+====================================================
+
+FR-001
+User dapat mencari lokasi.
+
+FR-002
+User dapat melihat Travel Advisory.
+
+FR-003
+User dapat membaca AI Explanation.
+
+FR-004
+User dapat mengirim Community Report.
+
+FR-005
+Moderator dapat memverifikasi laporan.
+
+FR-006
+Sistem membuat Verified Event.
+
+FR-007
+Sistem melakukan Attestation.
+
+FR-008
+Rule Engine menghitung Attention Level.
+
+FR-009
+AI membuat penjelasan.
+
+FR-010
+User dapat melihat Timeline.
+
+FR-011
+User dapat melihat Verification Status.
+
+FR-012
+User dapat melihat Confidence.
+
+
+====================================================
+NON FUNCTIONAL REQUIREMENTS
+====================================================
+
+Availability
+
+99%
+
+API Response
+
+<300 ms
+
+Rule Engine
+
+<100 ms
+
+AI
+
+<5 s
+
+Attestation
+
+Async
+
+Scalability
+
+1000 concurrent user
+
+Database
+
+ACID
+
+Audit
+
+Immutable
+
+Logging
+
+JSON Structured
+
+Backup
+
+Daily
+
+Recovery
+
+Automatic
+
+
+ERR001
+
+Unauthorized
+
+ERR002
+
+Location Not Found
+
+ERR003
+
+Invalid Evidence
+
+ERR004
+
+Duplicate Report
+
+ERR005
+
+Attestation Failed
+
+ERR006
+
+AI Timeout
+
+ERR007
+
+Rule Engine Failed
+
+ERR008
+
+Database Error
+
+ERR009
+
+Validation Failed
+
+ERR010
+
+Rate Limit
+
+
+ReportSubmitted
+
+↓
+
+ReportValidated
+
+↓
+
+VerifiedEventCreated
+
+↓
+
+AttestationCompleted
+
+↓
+
+SnapshotUpdated
+
+↓
+
+AICompleted
+
+↓
+
+NotificationSent
+
+
+Flutter
+
+↓
+
+API
+
+↓
+
+Validation
+
+↓
+
+Verification
+
+↓
+
+Attestation
+
+↓
+
+Rule Engine
+
+↓
+
+AI
+
+↓
+
+Database
+
+↓
+
+Flutter
+
+
+
+UserRegistered
+
+ReportSubmitted
+
+ReportVerified
+
+EventAttested
+
+SnapshotGenerated
+
+AttentionUpdated
+
+NotificationSent
+
+BookmarkCreated
+
+
+
+Configuration Specification ⭐⭐⭐⭐⭐
+
+Belum ada.
+
+Contoh
+
+JWT_SECRET
+
+DATABASE_URL
+
+REDIS_URL
+
+OPENROUTER_KEY
+
+ATTTESTCOIN_RPC
+
+ATTTESTCOIN_CHAIN
+
+MAP_TILE_URL
+
+OBJECT_STORAGE
+
+MAX_UPLOAD
+
+RATE_LIMIT
+
+Ini akan memudahkan deployment.
+
+8. Permission Matrix ⭐⭐⭐⭐⭐
+
+Belum ada.
+
+Misalnya
+
+Module	Traveler	Moderator	Admin
+Search	✅	✅	✅
+Submit Report	✅	✅	✅
+Verify	❌	✅	✅
+Rules	❌	❌	✅
+Settings	❌	❌	✅
+9. API Contract ⭐⭐⭐⭐⭐
+
+Saat ini endpoint sudah ada.
+
+Tetapi request body belum.
+
+Misalnya
+
+POST /reports
+
+{
+    "location_id":"",
+    "category":"",
+    "title":"",
+    "description":"",
+    "media":[]
+}
+
+Response
+
+{
+    "success":true,
+    "report_id":"",
+    "status":"Submitted"
+}
+
+Ini nanti mempercepat Flutter.
+
+10. State Transition Rules ⭐⭐⭐⭐⭐
+
+Belum ada.
+
+Misalnya
+
+Draft
+
+↓
+
+Submitted
+
+↓
+
+Validated
+
+↓
+
+Verified
+
+↓
+
+Attested
+
+↓
+
+Published
+
+↓
+
+Archived
+
+Tidak boleh
+
+Published
+
+↓
+
+Draft
+
+Tidak boleh
+
+Archived
+
+↓
+
+Submitted
+
+State Machine harus dikunci.
+
+11. Acceptance Criteria ⭐⭐⭐⭐⭐
+
+Ini yang sering diminta juri.
+
+Misalnya
+
+Feature
+
+Submit Report
+
+Given
+
+User Login
+
+When
+
+User Submit
+
+Then
+
+Status menjadi Submitted
+
+Lakukan untuk seluruh fitur.
+
+12. Definition of Done ⭐⭐⭐⭐⭐
+
+Ini hampir tidak pernah dibuat peserta hackathon.
+
+Contoh
+
+Backend selesai jika
+
+✔ Semua endpoint berjalan
+
+✔ Semua Unit Test lulus
+
+✔ Rule Engine konsisten
+
+✔ Attestation berhasil
+
+✔ AI menghasilkan explanation
+
+✔ Swagger lengkap
+
+✔ Docker berjalan
+
+✔ PostgreSQL migration sukses
+
+✔ Health Check aktif
+
+✔ Audit Log aktif
+Yang menurut saya sebaiknya DIHAPUS
+
+Ada beberapa bagian yang saya rasa justru melemahkan desain.
+
+1. Source Trust Score
+Official =100
+
+Community=50
+
+Hapus.
+
+Karena bertentangan dengan filosofi Attestcoin.
+
+Yang dipercaya adalah hasil Verification, bukan siapa pengirimnya.
+
+2. AI Recommendation Engine
+
+AI sebaiknya
+
+Explain
+
+Summarize
+
+Translate
+
+Bukan
+
+Recommend
+
+Rekomendasi perjalanan sebaiknya berasal dari Rule Engine, bukan AI, agar hasilnya deterministik dan mudah diaudit.
+
+3. Risk Score
+
+Saya juga menyarankan mengganti istilah
+
+Risk Score
+
+menjadi
+
+Attention Level
+
+atau
+
+Travel Advisory Level
+
+Karena proyek Anda memberikan dukungan keputusan, bukan penilaian hukum atau kepastian tingkat bahaya.
+
+Penambahan paling penting untuk hackathon
+
+Saya menyarankan menambahkan satu bagian lagi di awal setiap dokumen:
+
+====================================================
+ATTESTCOIN JUSTIFICATION
+====================================================
+
+Mengapa Attestcoin digunakan?
+
+Safara menggunakan Attestcoin sebagai decentralized verification layer untuk memastikan bahwa Verified Events dapat dibuktikan integritasnya, memiliki riwayat verifikasi yang dapat diaudit, serta dapat dikonsumsi oleh Rule Engine dan AI tanpa bergantung pada satu pihak terpusat.
+
+Attestcoin bukan fitur tambahan.
+
+Attestcoin merupakan komponen inti dalam lifecycle Verified Event.
+
+Ini penting karena salah satu kriteria penilaian hackathon adalah kedalaman integrasi Attestcoin sebagai fitur inti. Dengan bagian ini, setiap reviewer langsung memahami bahwa blockchain tidak ditempelkan di akhir proyek, melainkan menjadi bagian dari arsitektur utama.
+
+
+
+# BUSINESS RULES SPECIFICATION
+Project : Safara
+Version : 1.0
+Status : Locked
+
+====================================================
+1. GENERAL RULES
+====================================================
+
+BR-001
+
+Semua data yang ditampilkan kepada pengguna harus berasal dari
+Verified Event.
+
+--------------------------------------------
+
+BR-002
+
+Raw Evidence tidak boleh langsung ditampilkan kepada pengguna.
+
+--------------------------------------------
+
+BR-003
+
+AI hanya boleh memproses Verified Event.
+
+--------------------------------------------
+
+BR-004
+
+Rule Engine hanya memproses Verified Event.
+
+--------------------------------------------
+
+BR-005
+
+Semua perubahan wajib tercatat pada Audit Log.
+
+====================================================
+2. USER RULES
+====================================================
+
+BR-006
+
+User hanya dapat membuat laporan baru.
+
+--------------------------------------------
+
+BR-007
+
+User tidak dapat memverifikasi laporan.
+
+--------------------------------------------
+
+BR-008
+
+User hanya dapat mengubah laporan sebelum diverifikasi.
+
+--------------------------------------------
+
+BR-009
+
+Setelah laporan diverifikasi maka laporan tidak dapat diubah.
+
+====================================================
+3. MODERATOR RULES
+====================================================
+
+BR-010
+
+Moderator dapat:
+
+Approve
+
+Reject
+
+Request Revision
+
+--------------------------------------------
+
+BR-011
+
+Moderator tidak boleh mengubah isi laporan.
+
+--------------------------------------------
+
+BR-012
+
+Moderator hanya menentukan status verifikasi.
+
+====================================================
+4. VERIFIED EVENT RULES
+====================================================
+
+BR-013
+
+Verified Event hanya dibuat setelah laporan disetujui.
+
+--------------------------------------------
+
+BR-014
+
+Satu laporan menghasilkan maksimal satu Verified Event.
+
+--------------------------------------------
+
+BR-015
+
+Verified Event memiliki versi.
+
+====================================================
+5. ATTESTATION RULES
+====================================================
+
+BR-016
+
+Attestation hanya dilakukan pada Verified Event.
+
+--------------------------------------------
+
+BR-017
+
+Hash dibuat menggunakan Canonical JSON.
+
+--------------------------------------------
+
+BR-018
+
+Jika Attestation gagal maka sistem melakukan Retry.
+
+--------------------------------------------
+
+BR-019
+
+Jika Retry gagal maka masuk Manual Review Queue.
+
+====================================================
+6. RULE ENGINE
+====================================================
+
+BR-020
+
+Rule Engine tidak menggunakan AI.
+
+--------------------------------------------
+
+BR-021
+
+Rule Engine harus deterministik.
+
+--------------------------------------------
+
+BR-022
+
+Rule Engine menghasilkan:
+
+Attention Level
+
+Confidence
+
+Reason Codes
+
+====================================================
+7. AI RULES
+====================================================
+
+BR-023
+
+AI tidak boleh mengubah Rule Engine.
+
+--------------------------------------------
+
+BR-024
+
+AI tidak boleh membuat Evidence.
+
+--------------------------------------------
+
+BR-025
+
+AI hanya menghasilkan:
+
+Summary
+
+Explanation
+
+Translation
+
+====================================================
+8. DATABASE RULES
+====================================================
+
+BR-026
+
+Primary Key menggunakan UUID.
+
+--------------------------------------------
+
+BR-027
+
+Soft Delete digunakan pada data operasional.
+
+--------------------------------------------
+
+BR-028
+
+Audit Log tidak boleh dihapus.
+
+====================================================
+9. SECURITY RULES
+====================================================
+
+BR-029
+
+Semua endpoint menggunakan JWT.
+
+--------------------------------------------
+
+BR-030
+
+Semua request menggunakan HTTPS.
+
+--------------------------------------------
+
+BR-031
+
+Rate Limit aktif pada seluruh Public API.
+
+====================================================
+10. SYSTEM RULES
+====================================================
+
+BR-032
+
+Tidak ada keputusan otomatis tanpa Rule Engine.
+
+--------------------------------------------
+
+BR-033
+
+Blockchain bukan database utama.
+
+--------------------------------------------
+
+BR-034
+
+PostgreSQL menjadi Source of Truth.
+
+--------------------------------------------
+
+BR-035
+
+Attestcoin menjadi Verification Layer.
+
+====================================================
+END OF DOCUMENT
+
+
+# ACCEPTANCE CRITERIA
+Project : Safara
+
+====================================================
+AUTHENTICATION
+====================================================
+
+AC-001
+
+Given User belum login
+
+When Login berhasil
+
+Then JWT diberikan
+
+------------------------------------------------
+
+AC-002
+
+Given JWT valid
+
+When Mengakses API
+
+Then API mengembalikan data
+
+====================================================
+LOCATION
+====================================================
+
+AC-003
+
+Given lokasi tersedia
+
+When dibuka
+
+Then Attention Level tampil
+
+====================================================
+REPORT
+====================================================
+
+AC-004
+
+Given laporan valid
+
+When Submit
+
+Then Status menjadi Submitted
+
+------------------------------------------------
+
+AC-005
+
+Given laporan tidak lengkap
+
+When Submit
+
+Then Validation Error
+
+====================================================
+VERIFICATION
+====================================================
+
+AC-006
+
+Given Moderator Approve
+
+When Simpan
+
+Then Verified Event dibuat
+
+====================================================
+ATTESTATION
+====================================================
+
+AC-007
+
+Given Verified Event
+
+When Attestation berhasil
+
+Then Status menjadi Attested
+
+====================================================
+RULE ENGINE
+====================================================
+
+AC-008
+
+Given Verified Event
+
+When Rule dijalankan
+
+Then Snapshot dibuat
+
+====================================================
+AI
+====================================================
+
+AC-009
+
+Given Snapshot
+
+When AI selesai
+
+Then Explanation tersedia
+
+====================================================
+MAP
+====================================================
+
+AC-010
+
+Given Snapshot terbaru
+
+When Map dibuka
+
+Then Marker diperbarui
+
+====================================================
+END OF DOCUMENT
+
+# DEFINITION OF DONE
+Project : Safara
+
+Backend dinyatakan selesai apabila memenuhi seluruh syarat berikut.
+
+====================================================
+SOURCE CODE
+====================================================
+
+✔ Clean Architecture
+
+✔ Build Success
+
+✔ Linter Pass
+
+✔ Unit Test Pass
+
+✔ Integration Test Pass
+
+====================================================
+DATABASE
+====================================================
+
+✔ Migration Success
+
+✔ Seeder Success
+
+✔ UUID
+
+✔ Foreign Key Valid
+
+====================================================
+REST API
+====================================================
+
+✔ Semua Endpoint Berjalan
+
+✔ Swagger Lengkap
+
+✔ Validation Lengkap
+
+====================================================
+RULE ENGINE
+====================================================
+
+✔ Attention Level Konsisten
+
+✔ Confidence Konsisten
+
+✔ Reason Codes Muncul
+
+====================================================
+AI
+====================================================
+
+✔ Summary
+
+✔ Explanation
+
+✔ Translation
+
+====================================================
+ATTESTCOIN
+====================================================
+
+✔ Verified Event
+
+✔ Attestation
+
+✔ Retry
+
+✔ Status
+
+====================================================
+SECURITY
+====================================================
+
+✔ JWT
+
+✔ HTTPS
+
+✔ Rate Limit
+
+✔ Audit Log
+
+====================================================
+DEPLOYMENT
+====================================================
+
+✔ Docker Build
+
+✔ PostgreSQL Connected
+
+✔ Redis Connected
+
+✔ Health Check OK
+
+====================================================
+OBSERVABILITY
+====================================================
+
+✔ Structured Logging
+
+✔ Metrics
+
+✔ Error Handling
+
+====================================================
+QUALITY
+====================================================
+
+✔ Tidak ada Critical Bug
+
+✔ Tidak ada Hardcoded Secret
+
+✔ Tidak ada SQL Injection
+
+✔ Tidak ada Panic
+
+====================================================
+PROJECT
+====================================================
+
+✔ README
+
+✔ API Documentation
+
+✔ ERD
+
+✔ Architecture Diagram
+
+✔ Deployment Guide
+
+✔ Environment Example
+
+====================================================
+END OF DOCUMENT
+
+Status Backend Specification
+
+Sekarang kita sudah menyelesaikan:
+
+✅ Product Architecture
+✅ Backend Architecture
+✅ Database Design
+✅ Rule Engine Specification
+✅ Attestcoin Integration Specification
+✅ REST API Specification
+✅ Workflow & Business Process Specification
+✅ Business Rules Specification
+✅ Functional Requirements
+✅ Non Functional Requirements
+✅ Acceptance Criteria
+✅ Definition of Done
+
+Saya menganggap spesifikasi backend sudah selesai dan terkunci.
+
+Tahap berikutnya bukan lagi membuat spesifikasi backend, melainkan mulai membuat artefak implementasi seperti:
+
+ERD lengkap beserta seluruh tabel dan relasinya.
+Struktur proyek Go (Clean Architecture).
+Kontrak request/response API secara rinci (OpenAPI/Swagger).
+Implementasi modul satu per satu sesuai spesifikasi yang sudah dikunci.
+
+
+# ENTITY RELATIONSHIP DESIGN (ERD)
+Project : Safara
+Version : 1.0
+Status : LOCKED
+
+====================================================
+DATABASE OVERVIEW
+====================================================
+
+Authentication
+├── users
+├── roles
+├── user_sessions
+
+Location
+├── countries
+├── provinces
+├── cities
+├── locations
+
+Evidence
+├── reports
+├── report_media
+├── verified_events
+
+Verification
+├── verification_requests
+├── verification_logs
+
+Rule Engine
+├── rule_snapshots
+├── rule_reasons
+
+AI
+├── ai_explanations
+
+Attestcoin
+├── attestations
+
+Notification
+├── notifications
+
+System
+├── audit_logs
+├── system_settings
+
+====================================================
+AUTHENTICATION
+====================================================
+
+roles
+
+id (PK)
+
+name
+
+description
+
+created_at
+
+updated_at
+
+------------------------------------
+
+users
+
+id (PK)
+
+role_id (FK)
+
+fullname
+
+email
+
+password_hash
+
+avatar
+
+status
+
+created_at
+
+updated_at
+
+------------------------------------
+
+user_sessions
+
+id (PK)
+
+user_id (FK)
+
+jwt_id
+
+device
+
+ip_address
+
+expired_at
+
+created_at
+
+====================================================
+LOCATION
+====================================================
+
+countries
+
+id
+
+name
+
+iso_code
+
+------------------------------------
+
+provinces
+
+id
+
+country_id
+
+name
+
+------------------------------------
+
+cities
+
+id
+
+province_id
+
+name
+
+------------------------------------
+
+locations
+
+id
+
+city_id
+
+name
+
+latitude
+
+longitude
+
+osm_id
+
+created_at
+
+updated_at
+
+====================================================
+REPORT
+====================================================
+
+reports
+
+id
+
+user_id
+
+location_id
+
+category
+
+title
+
+description
+
+status
+
+submitted_at
+
+updated_at
+
+------------------------------------
+
+report_media
+
+id
+
+report_id
+
+file_url
+
+mime_type
+
+created_at
+
+====================================================
+VERIFICATION
+====================================================
+
+verification_requests
+
+id
+
+report_id
+
+status
+
+assigned_to
+
+created_at
+
+------------------------------------
+
+verification_logs
+
+id
+
+verification_id
+
+action
+
+note
+
+created_by
+
+created_at
+
+====================================================
+VERIFIED EVENT
+====================================================
+
+verified_events
+
+id
+
+report_id
+
+verification_id
+
+version
+
+event_time
+
+status
+
+created_at
+
+====================================================
+RULE ENGINE
+====================================================
+
+rule_snapshots
+
+id
+
+verified_event_id
+
+attention_level
+
+confidence
+
+recommendation
+
+generated_at
+
+------------------------------------
+
+rule_reasons
+
+id
+
+snapshot_id
+
+reason_code
+
+description
+
+weight
+
+====================================================
+AI
+====================================================
+
+ai_explanations
+
+id
+
+snapshot_id
+
+summary
+
+explanation
+
+language
+
+model
+
+created_at
+
+====================================================
+ATTESTCOIN
+====================================================
+
+attestations
+
+id
+
+verified_event_id
+
+chain
+
+network
+
+attestation_id
+
+tx_hash
+
+status
+
+attested_at
+
+====================================================
+NOTIFICATION
+====================================================
+
+notifications
+
+id
+
+user_id
+
+title
+
+body
+
+status
+
+created_at
+
+====================================================
+SYSTEM
+====================================================
+
+audit_logs
+
+id
+
+user_id
+
+module
+
+action
+
+entity
+
+entity_id
+
+before_data
+
+after_data
+
+created_at
+
+------------------------------------
+
+system_settings
+
+id
+
+setting_key
+
+setting_value
+
+updated_at
+
+====================================================
+RELATIONSHIP
+====================================================
+
+roles
+
+1 ------ N
+
+users
+
+----------------------------
+
+users
+
+1 ------ N
+
+reports
+
+----------------------------
+
+locations
+
+1 ------ N
+
+reports
+
+----------------------------
+
+reports
+
+1 ------ N
+
+report_media
+
+----------------------------
+
+reports
+
+1 ------ 1
+
+verification_requests
+
+----------------------------
+
+verification_requests
+
+1 ------ N
+
+verification_logs
+
+----------------------------
+
+reports
+
+1 ------ 1
+
+verified_events
+
+----------------------------
+
+verified_events
+
+1 ------ 1
+
+rule_snapshots
+
+----------------------------
+
+rule_snapshots
+
+1 ------ N
+
+rule_reasons
+
+----------------------------
+
+rule_snapshots
+
+1 ------ 1
+
+ai_explanations
+
+----------------------------
+
+verified_events
+
+1 ------ 1
+
+attestations
+
+----------------------------
+
+users
+
+1 ------ N
+
+notifications
+
+----------------------------
+
+users
+
+1 ------ N
+
+audit_logs
+
+====================================================
+INDEX
+====================================================
+
+users.email
+
+reports.location_id
+
+reports.status
+
+verified_events.status
+
+rule_snapshots.attention_level
+
+attestations.attestation_id
+
+notifications.user_id
+
+audit_logs.created_at
+
+====================================================
+CASCADE RULE
+====================================================
+
+Role
+
+RESTRICT
+
+User
+
+SOFT DELETE
+
+Location
+
+RESTRICT
+
+Report
+
+SOFT DELETE
+
+Verified Event
+
+RESTRICT
+
+Attestation
+
+RESTRICT
+
+Audit Log
+
+NEVER DELETE
+
+====================================================
+END OF DOCUMENT
+
+Masih ada 2 artefak implementasi yang jauh lebih penting dan akan menghemat waktu coding:
+
+1. Struktur Project Go (Clean Architecture)
+
+Contohnya:
+
+cmd/
+
+internal/
+
+domain/
+
+application/
+
+repository/
+
+handler/
+
+middleware/
+
+config/
+
+worker/
+
+pkg/
+
+migration/
+
+docs/
+
+Dari sini kita bisa langsung mulai membuat folder tanpa kebingungan.
+
+2. OpenAPI / Swagger Specification
+
+Bukan hanya daftar endpoint, tetapi lengkap dengan:
+
+request body
+response body
+validation
+contoh payload
+error response
+
+Keuntungannya:
+
+Flutter bisa langsung menggunakan kontrak API.
+Backend tinggal mengimplementasikan handler.
+Testing dengan Postman atau Bruno menjadi sangat mudah.
+Dokumentasi untuk juri hackathon sudah tersedia.

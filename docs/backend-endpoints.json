@@ -1,0 +1,151 @@
+{
+  "base_url": "http://localhost:8000/api",
+  "health": [
+    {
+      "method": "GET",
+      "path": "/health",
+      "auth": false
+    }
+  ],
+  "auth": [
+    {
+      "method": "POST",
+      "path": "/auth/register",
+      "auth": false
+    },
+    {
+      "method": "POST",
+      "path": "/auth/verify-email",
+      "auth": false
+    },
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "auth": false
+    },
+    {
+      "method": "POST",
+      "path": "/auth/logout",
+      "auth": true
+    }
+  ],
+  "flutter_user": [
+    {
+      "method": "POST",
+      "path": "/wallet/connect",
+      "role": "user"
+    },
+    {
+      "method": "GET",
+      "path": "/wallet/profile",
+      "role": "user"
+    },
+    {
+      "method": "POST",
+      "path": "/identity/create",
+      "role": "user"
+    },
+    {
+      "method": "GET",
+      "path": "/identity",
+      "role": "user"
+    },
+    {
+      "method": "POST",
+      "path": "/claims/create",
+      "role": "user"
+    },
+    {
+      "method": "GET",
+      "path": "/claims",
+      "role": "user"
+    },
+    {
+      "method": "POST",
+      "path": "/documents/upload",
+      "role": "user"
+    },
+    {
+      "method": "GET",
+      "path": "/documents",
+      "role": "user"
+    },
+    {
+      "method": "POST",
+      "path": "/rules/validate",
+      "role": "user"
+    },
+    {
+      "method": "POST",
+      "path": "/proof/generate",
+      "role": "user"
+    },
+    {
+      "method": "POST",
+      "path": "/proof/share",
+      "role": "user"
+    },
+    {
+      "method": "POST",
+      "path": "/blockchain/store",
+      "role": "user"
+    },
+    {
+      "method": "GET",
+      "path": "/history",
+      "role": "user"
+    },
+    {
+      "method": "GET",
+      "path": "/profile",
+      "role": "user"
+    }
+  ],
+  "verifier_web": [
+    {
+      "method": "GET",
+      "path": "/dashboard",
+      "role": "verifier"
+    },
+    {
+      "method": "POST",
+      "path": "/verification/read",
+      "role": "verifier"
+    },
+    {
+      "method": "POST",
+      "path": "/verification/verify",
+      "role": "verifier"
+    },
+    {
+      "method": "POST",
+      "path": "/verification/approve",
+      "role": "verifier"
+    },
+    {
+      "method": "POST",
+      "path": "/verification/reject",
+      "role": "verifier"
+    },
+    {
+      "method": "POST",
+      "path": "/ai/explain",
+      "role": "verifier"
+    },
+    {
+      "method": "GET",
+      "path": "/proof/{proofId}",
+      "role": "verifier"
+    },
+    {
+      "method": "GET",
+      "path": "/audit",
+      "role": "verifier"
+    },
+    {
+      "method": "GET",
+      "path": "/report/export",
+      "role": "verifier"
+    }
+  ]
+}
