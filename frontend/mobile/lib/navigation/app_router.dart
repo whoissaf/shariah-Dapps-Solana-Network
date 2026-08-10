@@ -8,6 +8,8 @@ import '../screens/identity/identity_screen.dart';
 import '../screens/identity/claims_screen.dart';
 import '../screens/identity/create_claim_screen.dart';
 import '../screens/proofs/proofs_screen.dart';
+import '../screens/proofs/proof_detail_screen.dart';
+import '../screens/proofs/qr_share_screen.dart';
 import '../screens/history/history_screen.dart';
 import '../screens/profile/profile_screen.dart';
 
@@ -22,6 +24,8 @@ class AppRoutes {
   static const String claims = '/claims';
   static const String createClaim = '/claims/create';
   static const String proofs = '/proofs';
+  static const String proofDetail = '/proofs/detail';
+  static const String qrShare = '/proofs/share';
   static const String history = '/history';
   static const String profile = '/profile';
 }
@@ -47,6 +51,22 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const CreateClaimScreen());
       case AppRoutes.proofs:
         return MaterialPageRoute(builder: (_) => const ProofsScreen());
+      case AppRoutes.proofDetail:
+        final args = settings.arguments as Map<String, dynamic>? ?? {};
+        return MaterialPageRoute(
+          builder: (_) => ProofDetailScreen(
+            proof: args['proof'] as Map<String, dynamic>? ?? const {},
+          ),
+        );
+      case AppRoutes.qrShare:
+        final args = settings.arguments as Map<String, dynamic>? ?? {};
+        return MaterialPageRoute(
+          builder: (_) => QrShareScreen(
+            proofId: args['proofId'] as String? ?? '0',
+            qrContent: args['qrContent'] as String? ?? '',
+            expiresAt: args['expiresAt'] as String? ?? '',
+          ),
+        );
       case AppRoutes.history:
         return MaterialPageRoute(builder: (_) => const HistoryScreen());
       case AppRoutes.profile:
