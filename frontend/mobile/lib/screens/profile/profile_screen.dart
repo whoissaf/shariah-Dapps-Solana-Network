@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../design/theme.dart';
 import '../../design/components/app_card.dart';
 import '../../design/components/status_badge.dart';
+import '../../navigation/app_router.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -86,11 +87,37 @@ class ProfileScreen extends StatelessWidget {
 
               const SizedBox(height: 16),
 
+              AppCard(
+                child: Column(
+                  children: [
+                    _MenuRow(
+                      icon: Icons.settings_outlined,
+                      title: 'Settings',
+                      subtitle: 'Theme, notifications, security',
+                      onTap: () {
+                        Navigator.of(context).pushNamed(AppRoutes.settings);
+                      },
+                    ),
+                    const Divider(height: 24),
+                    _MenuRow(
+                      icon: Icons.info_outline,
+                      title: 'About',
+                      subtitle: 'Version, license, team',
+                      onTap: () {
+                        Navigator.of(context).pushNamed(AppRoutes.about);
+                      },
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 16),
+
               SizedBox(
                 width: double.infinity,
                 child: OutlinedButton(
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/login');
+                    Navigator.of(context).pushReplacementNamed(AppRoutes.login);
                   },
                   style: OutlinedButton.styleFrom(
                     foregroundColor: AppColors.error,
@@ -155,6 +182,67 @@ class _ProfileRow extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class _MenuRow extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final VoidCallback onTap;
+
+  const _MenuRow({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(8),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        child: Row(
+          children: [
+            Icon(icon, size: 20, color: AppColors.primary),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.textPrimary,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    subtitle,
+                    style: const TextStyle(
+                      fontFamily: 'Inter',
+                      fontSize: 12,
+                      color: AppColors.textSecondary,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(
+              Icons.chevron_right,
+              color: AppColors.textMuted,
+              size: 20,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

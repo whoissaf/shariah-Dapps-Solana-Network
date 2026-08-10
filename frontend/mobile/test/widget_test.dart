@@ -73,6 +73,8 @@ void main() {
     expect(find.text('User Demo'), findsOneWidget);
     expect(find.text('user@example.com'), findsWidgets);
     expect(find.text('Logout'), findsOneWidget);
+    expect(find.text('Settings'), findsOneWidget);
+    expect(find.text('About'), findsOneWidget);
   });
 
   testWidgets('proofs list renders all 4 proofs',
@@ -155,5 +157,38 @@ void main() {
     expect(find.text('Proof Verified'), findsOneWidget);
     expect(find.text('QR Scanned'), findsOneWidget);
     expect(find.text('Proof Generated'), findsOneWidget);
+  });
+
+  testWidgets('settings screen renders all sections',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const IdentityWalletApp());
+    await tester.pumpAndSettle();
+
+    tester.state<NavigatorState>(find.byType(Navigator)).pushNamed(AppRoutes.settings);
+    await tester.pumpAndSettle();
+
+    expect(find.text('Settings'), findsOneWidget);
+    expect(find.text('Appearance'), findsOneWidget);
+    expect(find.text('Notifications'), findsOneWidget);
+    expect(find.text('Security'), findsOneWidget);
+    expect(find.text('Dark Mode'), findsOneWidget);
+    expect(find.text('Biometric Authentication'), findsOneWidget);
+  });
+
+  testWidgets('about screen renders app info',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const IdentityWalletApp());
+    await tester.pumpAndSettle();
+
+    tester.state<NavigatorState>(find.byType(Navigator)).pushNamed(AppRoutes.about);
+    await tester.pumpAndSettle();
+
+    expect(find.text('About'), findsOneWidget);
+    expect(find.text('Identity Wallet'), findsOneWidget);
+    expect(find.text('Application'), findsOneWidget);
+    expect(find.text('Blockchain Network'), findsOneWidget);
+    expect(find.text('Ethereum (Sepolia Testnet)'), findsOneWidget);
+    expect(find.text('Semaphore + Groth16'), findsOneWidget);
+    expect(find.text('MIT License'), findsOneWidget);
   });
 }

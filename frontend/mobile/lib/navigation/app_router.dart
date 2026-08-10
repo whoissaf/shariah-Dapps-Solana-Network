@@ -12,6 +12,8 @@ import '../screens/proofs/proof_detail_screen.dart';
 import '../screens/proofs/qr_share_screen.dart';
 import '../screens/history/history_screen.dart';
 import '../screens/profile/profile_screen.dart';
+import '../screens/profile/settings_screen.dart';
+import '../screens/profile/about_screen.dart';
 
 class AppRoutes {
   static const String splash = '/splash';
@@ -28,6 +30,8 @@ class AppRoutes {
   static const String qrShare = '/proofs/share';
   static const String history = '/history';
   static const String profile = '/profile';
+  static const String settings = '/settings';
+  static const String about = '/about';
 }
 
 class AppRouter {
@@ -71,6 +75,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const HistoryScreen());
       case AppRoutes.profile:
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
+      case AppRoutes.settings:
+        return MaterialPageRoute(builder: (_) => const SettingsScreen());
+      case AppRoutes.about:
+        return MaterialPageRoute(builder: (_) => const AboutScreen());
       default:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
     }
