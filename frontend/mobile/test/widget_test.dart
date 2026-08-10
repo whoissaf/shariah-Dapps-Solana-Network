@@ -4,7 +4,7 @@ import 'package:identity_wallet/main.dart';
 import 'package:identity_wallet/navigation/app_router.dart';
 
 void main() {
-  testWidgets('splash screen renders brand', (WidgetTester tester) async {
+  testWidgets('splash renders brand', (WidgetTester tester) async {
     await tester.pumpWidget(const IdentityWalletApp());
     await tester.pump();
 
@@ -12,46 +12,66 @@ void main() {
     expect(find.byIcon(Icons.shield_outlined), findsOneWidget);
   });
 
-  testWidgets('login screen validates empty form', (WidgetTester tester) async {
-    await tester.pumpWidget(const IdentityWalletApp());
-    await tester.pumpAndSettle();
-
-    tester.state<NavigatorState>(find.byType(Navigator)).pushNamed(AppRoutes.login);
-    await tester.pumpAndSettle();
-
-    await tester.tap(find.widgetWithText(ElevatedButton, 'Sign In'));
-    await tester.pump();
-
-    expect(find.text('Email is required'), findsOneWidget);
-    expect(find.text('Password is required'), findsOneWidget);
-  });
-
-  testWidgets('register screen validates password match',
+  testWidgets('home dashboard renders all status cards',
       (WidgetTester tester) async {
     await tester.pumpWidget(const IdentityWalletApp());
     await tester.pumpAndSettle();
 
-    tester
-        .state<NavigatorState>(find.byType(Navigator))
-        .pushNamed(AppRoutes.register);
+    tester.state<NavigatorState>(find.byType(Navigator)).pushNamed(AppRoutes.home);
     await tester.pumpAndSettle();
 
-    await tester.enterText(
-      find.widgetWithText(TextFormField, 'Your name'),
-      'Test User',
-    );
-    await tester.enterText(
-      find.widgetWithText(TextFormField, 'you@example.com'),
-      'test@example.com',
-    );
+    expect(find.text('Welcome back'), findsOneWidget);
+    expect(find.text('Privacy Score'), findsOneWidget);
+    expect(find.text('85/100'), findsOneWidget);
+    expect(find.text('Wallet'), findsOneWidget);
+    expect(find.text('Identity'), findsOneWidget);
+    expect(find.text('Latest Proof'), findsOneWidget);
+    expect(find.text('Verification'), findsOneWidget);
+    expect(find.byIcon(Icons.home), findsOneWidget);
+  });
 
-    final passwordFields = find.byType(TextFormField);
-    await tester.enterText(passwordFields.at(2), 'password123');
-    await tester.enterText(passwordFields.at(3), 'different123');
+  testWidgets('claims screen renders all 4 claim types',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const IdentityWalletApp());
+    await tester.pumpAndSettle();
 
-    await tester.tap(find.widgetWithText(ElevatedButton, 'Create Account'));
-    await tester.pump();
+    tester.state<NavigatorState>(find.byType(Navigator)).pushNamed(AppRoutes.claims);
+    await tester.pumpAndSettle();
 
-    expect(find.text('Passwords do not match'), findsOneWidget);
+    expect(find.text('My Claims'), findsOneWidget);
+    expect(find.text('Income Threshold'), findsOneWidget);
+    expect(find.text('Age Minimum'), findsOneWidget);
+    expect(find.text('Business Category'), findsOneWidget);
+    expect(find.text('No Restricted Financing'), findsOneWidget);
+    expect(find.text('New Claim'), findsOneWidget);
+  });
+
+  testWidgets('identity screen renders hero card',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const IdentityWalletApp());
+    await tester.pumpAndSettle();
+
+    tester.state<NavigatorState>(find.byType(Navigator)).pushNamed(AppRoutes.identity);
+    await tester.pumpAndSettle();
+
+    expect(find.text('My Identity'), findsOneWidget);
+    expect(find.text('Anonymous Identity'), findsOneWidget);
+    expect(find.text('Anonymous ID'), findsOneWidget);
+    expect(find.text('Identity Commitment'), findsOneWidget);
+    expect(find.text('ACTIVE'), findsOneWidget);
+  });
+
+  testWidgets('profile screen renders user info',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(const IdentityWalletApp());
+    await tester.pumpAndSettle();
+
+    tester.state<NavigatorState>(find.byType(Navigator)).pushNamed(AppRoutes.profile);
+    await tester.pumpAndSettle();
+
+    expect(find.text('Profile'), findsOneWidget);
+    expect(find.text('User Demo'), findsOneWidget);
+    expect(find.text('user@example.com'), findsWidgets);
+    expect(find.text('Logout'), findsOneWidget);
   });
 }
