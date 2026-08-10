@@ -7,6 +7,7 @@ const menuItems = [
   { href: '/dashboard', label: 'Dashboard', icon: '◧' },
   { href: '/dashboard/verification', label: 'Verification', icon: '✓' },
   { href: '/dashboard/audit', label: 'Audit Trail', icon: '⊙' },
+  { href: '/dashboard/blockchain', label: 'Blockchain', icon: '◈' },
   { href: '/dashboard/reports', label: 'Reports', icon: '◨' },
   { href: '/dashboard/profile', label: 'Profile', icon: '◉' },
 ];
@@ -26,8 +27,9 @@ export function Sidebar() {
 
       <nav className="sidebar-nav">
         {menuItems.map((item) => {
-          const isActive = pathname === item.href || 
-            (item.href !== '/dashboard' && pathname.startsWith(item.href));
+          const isExact = pathname === item.href;
+          const isPrefix = item.href !== '/dashboard' && pathname?.startsWith(item.href);
+          const isActive = isExact || isPrefix;
           return (
             <Link
               key={item.href}
@@ -42,6 +44,10 @@ export function Sidebar() {
       </nav>
 
       <div className="sidebar-footer">
+        <Link href="/dashboard/settings" className="sidebar-item" style={{ marginBottom: 12 }}>
+          <span className="sidebar-icon">⚙</span>
+          <span className="sidebar-label">Settings</span>
+        </Link>
         <div className="sidebar-user">
           <div className="sidebar-avatar">V</div>
           <div>
